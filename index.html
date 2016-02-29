@@ -3,70 +3,20 @@
   <meta charset=utf-8>
   <title>Reddit visualisation</title>
   <style>
-    body {
-      font-family: "Helvetica", sans-serif;
+    .chart rect {
+      fill: steelblue;
     }
-    .source circle {
-      stroke-width: 1px;
-      -webkit-transition: all 0.5s;
-    }
-    .source text {
-      font-size: 1em;
-    }
-    .source.exiting {
-      fill: red;
-      opacity: 0;
-    }
-    .source.increase circle {
-      fill: blue;
-    }
-    #menu {
-      position: relative;
-      float: left;
-      width: 20%;
-      margin-top: 1em;
-    }
-    #menu a {
-      overflow: auto;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      -webkit-transition: all 0.5s;
-    }
-    svg {
-      float: left;
-    }
-    .source .diff {
-      fill: green;
-      stroke: none;
-    }
-    .source .diff.down {
-      fill: red;
-    }
-    #menu .story {
-      position: absolute;
-      height: 1em;
-    }
-    #scale {
-      float: left;
-      width: 2%;
-      height: 400px;
-      position: relative;
-    }
-    .story-point {
-      width: 60%;
-      height: 4px;
-      position: absolute;
-      -webkit-transition: all 0.5s;
+
+    .chart text {
+      fill: white;
+      font: 10px sans-serif;
+      text-anchor: end;
     }
   </style>
 </head>
 <body>
-  <svg id="viz" width=68% height=100%></svg>
-  <div id="scale" ></div>
-  <div id="menu">
-  </div>
+  <svg id="viz" class="chart"></svg>
   <script src="d3.js"></script>
-  <script src="d3.jsonp.js"></script>
   <script src="underscore.js"></script>
-  <script src="my_viz.js"></script>
+  <script src="viz.js"></script>
 </body>
